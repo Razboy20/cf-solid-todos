@@ -1,0 +1,37 @@
+{
+  "extends": "./.vinxi/types/tsconfig.json", // add nitro types
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "jsx": "preserve",
+    "jsxImportSource": "solid-js",
+    "allowJs": true,
+    "strict": true,
+    "noEmit": true,
+    "isolatedModules": true,
+    "sourceMap": true,
+    "skipLibCheck": true,
+    "baseUrl": "./",
+    "types": [
+      "vinxi/types/client",
+      "node",
+      "unplugin-icons/types/solid",
+    ],
+    "paths": {
+      "~/*": [
+        "./src/*"
+      ]
+    },
+  },
+  "include": [
+    "./src/**/*",
+    "./app.config.ts",
+    "unocss.config.ts",
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
